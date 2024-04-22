@@ -1,4 +1,4 @@
-# Global
+# EMAIL WRITER
 
 .env file content
 ```
@@ -24,7 +24,7 @@ python3 main.py
 
 # Pandas
 Affiche l'exploration initiale du fichier emails-ref.json.  
-Supprime les emails dont on ne peut pas identifier le l'émetteur ou destinataire.  
+Supprime les emails dont on ne peut pas identifier l'émetteur ou destinataire.  
 Dans le cadre de l'exercice on identifie une personne par son prénom.  
 Formate le fichier json en groupant les emails par couple émetteur/destinataire.  
 
@@ -48,7 +48,7 @@ Supprime les contacts jugés non pertinents.
 Dans le cadre de l'exercice on considère que les membres de la famille proche ne sont pas des cibles pertinentes.  
 Conserve uniquement les contacts jugés pertinents.  
 Dans le cadre de l'exercice on considère que seuls les amis et les relations professionnelles sont des cibles pertinentes.  
-Supprime les contact avec qui il y a eu au moins un email délicat.  
+Supprime les contacts avec qui il y a eu au moins un email délicat.  
 Affiche les emails (différents) sélectionnés.
 
 Entrée: ./screening/emails-clean.json  
