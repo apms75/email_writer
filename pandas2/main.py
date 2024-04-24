@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 import os
 import pandas as pd
-from typing import Tuple, List, Optional
+from typing import List, Optional
 
 import __mistral_wrapper__
 from mistral_cache import MistralCache
@@ -90,7 +90,7 @@ def extract_one_email_infos(
 
 def extract_emails_infos(
         df: pd.DataFrame,
-        client: MistralClientWrapper) -> Tuple[List[str]]:
+        client: MistralClientWrapper) -> List[List[str]]:
 
     res = [[]] * len(df)
     for i, body in enumerate(df.loc[:, "body"]):

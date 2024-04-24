@@ -89,10 +89,11 @@ Extrait de chaque email:
 * le destinataire,
 * le nom du destinataire,
 * le lien entre l'émetteur et le destinataire.
+
 Affiche le dataframe.  
 
-Entrée: ./pandas/emails-ref.json  
-Sortie: ./pandas/emails-clean.json  
+Entrée: ./pandas2/emails-ref.json   
+Sortie: ./pandas2/emails-clean.json  
 ```
 python3 -m venv pandas
 cd pandas
