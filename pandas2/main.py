@@ -35,16 +35,6 @@ def open_mistral_client() -> MistralClientWrapper:
     )
 
 
-def display_distinct_attributes(pairs: List[object], keyword: str):
-    emails = set()
-    for pair in pairs:
-        emails.add(pair[keyword])
-
-    for i, email in enumerate(emails):
-        print("=" * 80)
-        print(f"{i + 1}. {email}")
-
-
 def message_printf(msg: str, values: List[object]) -> str:
     for v in values:
         msg = msg.replace(v[0], v[1])

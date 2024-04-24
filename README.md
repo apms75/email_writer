@@ -82,14 +82,14 @@ python3 main.py
 ```
 
 # Pandas2
-Supprime les émails en doublon.
+Supprime les émails en doublon.  
 Extrait de chaque email:
 * l'émetteur,
 * le nom de l'émetteur,
 * le destinataire,
 * le nom du destinataire,
 * le lien entre l'émetteur et le destinataire.
-Affiche le dataframe.
+Affiche le dataframe.  
 
 Entrée: ./pandas/emails-ref.json  
 Sortie: ./pandas/emails-clean.json  
