@@ -80,3 +80,29 @@ pip install mistralai
 ln -s ../.env .env
 python3 main.py
 ```
+
+# Pandas2
+Supprime les émails en doublon.
+Extrait de chaque email:
+* l'émetteur,
+* le nom de l'émetteur,
+* le destinataire,
+* le nom du destinataire,
+* le lien entre l'émetteur et le destinataire.
+Affiche le dataframe.
+
+Entrée: ./pandas/emails-ref.json  
+Sortie: ./pandas/emails-clean.json  
+```
+python3 -m venv pandas
+cd pandas
+source bin/activate
+pip install mistralai
+pip install pandas
+pip install python-dotenv  
+ln -s ../.env .env
+python3 main.py
+```
+
+# Writer2
+Coming soon...
