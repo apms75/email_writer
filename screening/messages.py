@@ -11,6 +11,7 @@ system_message_yes_no_multiple = """
     Ne pas expliquer les réponses.
     """
 
+
 user_message_family_1 = """
     1. L'auteur du message est-elle la mère du destinataire ?
     2. L'auteur du message est-il le père du destinataire ?
@@ -21,6 +22,7 @@ user_message_family_1 = """
     7. L'auteur du message est-elle la femme du destinataire ?
     8. L'auteur du message est-il le mari du destinataire ?
     """
+
 
 user_message_family_2 = """
     1. Le destinataire du message est-il un fils de l'auteur ?
@@ -33,6 +35,7 @@ user_message_family_2 = """
     8. Le destinataire du message est-il le mari de l'auteur ?
     """
 
+
 user_message_friend_1 = """
     1. L'auteur du message est-il un ami du destinataire ?
     2. L'auteur du message est-elle une amie du destinataire ?
@@ -43,6 +46,7 @@ user_message_friend_1 = """
     7. L'auteur du message est-il un client du destinataire ?
     8. L'auteur du message est-elle une client du destinataire ?
     """
+
 
 user_message_friend_2 = """
     1. Le destinataire du message est-il un ami de l'auteur ?
@@ -55,9 +59,11 @@ user_message_friend_2 = """
     8. L'auteur du message est-elle une fournisseuse du destinataire ?
     """
 
+
 user_message_sensitive_1 = """
     Ce message est-il agressif ?
     """
+
 
 user_message_sensitive_2 = """
     L'auteur de ce message semble-t-il mécontent ?
