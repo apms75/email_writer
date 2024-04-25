@@ -155,7 +155,7 @@ def generate_emails(pairs: List[object],
     return generate_list(pairs, client, generate_one_email)
 
 
-def build_exemple(pair: object) -> str:
+def build_example(pair: object) -> str:
     res = ""
     for body in pair["bodies"]:
         res += body + "\n"
@@ -164,7 +164,7 @@ def build_exemple(pair: object) -> str:
 
 def generate_one_email_alt(pair: object, client: MistralClientWrapper) -> str:
     system_msg = message_printf(msg.system_message_email_alt, [
-        ("[exemple]", build_exemple(pair)),
+        ("[example]", build_example(pair)),
         ("[sender]", pair["recipient"]),
         ("[recipient]", pair["sender"])])
 
@@ -172,6 +172,9 @@ def generate_one_email_alt(pair: object, client: MistralClientWrapper) -> str:
         ("[email_template]", msg.email_template),
         ("[sender]", pair["recipient"])])
 
+    print(system_msg)
+
+    print(user_msg)
     return client.chat(system_msg, user_msg)
 
 

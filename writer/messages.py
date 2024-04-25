@@ -57,7 +57,7 @@ system_message_email_alt = """
     Tu es compétent dans l'analyse de texte et tu sais étudier un texte pour en définir le niveau de langage et le ton.
 
     Voici un exemple représentatif du style:
-    [exemple]
+    [example]
 
     [sender] écrit [recipient].
     La réponse contient seulement le message.
