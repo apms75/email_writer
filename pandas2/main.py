@@ -104,7 +104,7 @@ def rearrange_dataframe(
         client: MistralClientWrapper) -> pd.DataFrame:
 
     df = df.drop(columns=["from"])
-    df = df.drop_duplicates().reset_index()
+    df = df.drop_duplicates().reset_index(drop=True)
 
     infos = extract_emails_infos(df, client)
     for k, v in new_columns.items():
