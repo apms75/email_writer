@@ -156,10 +156,10 @@ def insert_recipients(df: pd.DataFrame, recipients: List[Optional[str]]):
 
 
 def select_not_null_recipients(df: pd.DataFrame) -> pd.DataFrame:
-    return df[df["recipient"].notnull()].reset_index()
+    return df[df["recipient"].notnull()].reset_index(drop=True)
 
 
-def group_by_hash_from_and_recipient(df: pd.DataFrame) -> pd.DataFrame:
+def group_by_from_and_recipient(df: pd.DataFrame) -> pd.DataFrame:
     gb = df.groupby(["from", "recipient"])["body"]
     return gb.apply(list).reset_index(name="bodies")
 
@@ -201,7 +201,7 @@ def insert_senders(df: pd.DataFrame, senders: List[Optional[str]]):
 
 
 def select_not_null_senders(df: pd.DataFrame):
-    return df[df["sender"].notnull()].reset_index()
+    return df[df["sender"].notnull()].reset_index(drop=True)
 
 
 def rearrange_dataframe(
@@ -212,7 +212,7 @@ def rearrange_dataframe(
     insert_recipients(df, recipients)
     df = select_not_null_recipients(df)
 
-    df = group_by_hash_from_and_recipient(df)
+    df = group_by_from_and_recipient(df)
 
     senders = extract_senders(df, client)
     insert_senders(df, senders)
