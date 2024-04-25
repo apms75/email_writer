@@ -92,11 +92,11 @@ Extrait de chaque email:
 
 Affiche le dataframe.  
 
-Entrée: ./pandas2/emails-ref.json   
+Entrée: ./pandas2/emails-ref.json  
 Sortie: ./pandas2/emails-clean.json  
 ```
 python3 -m venv pandas
-cd pandas
+cd pandas2
 source bin/activate
 pip install mistralai
 pip install pandas
@@ -106,4 +106,17 @@ python3 main.py
 ```
 
 # Writer2
-Coming soon...
+Ecrit un email pour chaque paire émetteur/destinataire dont on a réussi à extraire les prénoms.  
+Affiche les emails générés.  
+
+Entrée: ./writer2/emails-clean.json  
+Sortie: ./writer2/emails-final.json  
+```
+python3 -m venv pandas
+cd writer2
+source bin/activate
+pip install mistralai
+pip install python-dotenv  
+ln -s ../.env .env
+python3 main.py
+```
